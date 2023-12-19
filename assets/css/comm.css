@@ -1,0 +1,30 @@
+.slide li {
+  height: 300px;
+}
+.slide li a {
+  display: block;
+  height: 100%;
+  color: #ef76f3;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.card {
+  height: 300px;
+  border: 3px solid red;
+  background-color: skyblue;
+}
+
+.card2 {
+  position: relative;
+  height: 300px;
+  border: 3px solid black;
+  background-color: #ef76f3;
+}
+.card2 span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=comm.css.map */

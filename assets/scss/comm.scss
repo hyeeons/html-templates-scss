@@ -1,0 +1,27 @@
+@import "variables", "mixins";
+
+.slide {
+  li {
+    height: 300px;
+    a {
+      display: block;
+      height: 100%;
+      color: $primary;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 20px;
+    }
+  }
+}
+
+.card {
+  @include card(skyblue, red);
+}
+
+.card2 {
+  position: relative;
+  @include card($primary, $secondary);
+  span {
+    @include posXY;
+  }
+}
