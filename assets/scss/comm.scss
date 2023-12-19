@@ -1,4 +1,4 @@
-@import "variables", "mixins";
+@import "variables", "mixins", "fonts", "reset";
 
 .slide {
   li {
@@ -25,3 +25,5 @@
     @include posXY;
   }
 }
+
+@import "main", "sub1";
