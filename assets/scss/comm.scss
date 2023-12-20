@@ -1,29 +1,75 @@
 @import "variables", "mixins", "fonts", "reset";
 
-.slide {
-  li {
-    height: 300px;
-    a {
+// button style
+
+// card style
+
+// list style
+
+// layout
+
+.wrap {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: $gray-100;
+}
+
+#header {
+  height: $hdH;
+  background: $gray-400;
+}
+
+#main {
+  min-width: calc(100vh - $hdH - $ftH);
+  flex-grow: 1;
+  background: $gray-800;
+}
+
+#footer {
+  width: 100%;
+  height: $ftH;
+  position: fixed;
+  bottom: 0;
+  background: $gray-200;
+}
+
+// header (상세)
+#header {
+  .inner {
+    // @include flex
+    @include flexsb;
+  }
+  .col-right {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .util {
+    ul {
+      display: flex;
+    }
+    .link-g {
       display: block;
-      height: 100%;
-      color: $primary;
-      font-weight: bold;
-      text-decoration: none;
-      margin: 20px;
+      height: $hdH;
+      line-height: $hdH;
+      &::before {
+        font-family: "Font Awesome 6 free";
+        font-weight: 900;
+      }
+    }
+
+    .link-lang {
+      &::before {
+        content: "\f0ac";
+      }
+    }
+
+    .link-srch {
+    }
+    .link-page {
     }
   }
 }
-
-.card {
-  @include card(skyblue, red);
-}
-
-.card2 {
-  position: relative;
-  @include card($primary, $secondary);
-  span {
-    @include posXY;
-  }
-}
+// footer (상세)
 
 @import "main", "sub1";
