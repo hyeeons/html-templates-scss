@@ -98,17 +98,20 @@ input {
   &[type="password"],
   &[type="submit"],
   &[type="search"] {
-    -webkit-appearance: none;
+    appearance: none; // 표준 속성
+    -webkit-appearance: none; // 웹킷 브라우저용 속성
     border-radius: 0;
   }
 
   &:checked[type="checkbox"] {
     background-color: #666;
+    appearance: checkbox;
     -webkit-appearance: checkbox;
   }
 }
 
 button {
+  appearance: button;
   -webkit-appearance: button;
   border-radius: 0;
 }
@@ -118,11 +121,13 @@ input {
   &[type="submit"],
   &[type="reset"],
   &[type="file"] {
+    appearance: button;
     -webkit-appearance: button;
     border-radius: 0;
   }
 
   &[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
     -webkit-appearance: none;
   }
 }
