@@ -358,6 +358,7 @@ legend {
   gap: 5px;
   position: relative;
   z-index: 1100;
+  cursor: pointer;
 }
 #header .gnb-wrap .label-burger .bar {
   display: block;
