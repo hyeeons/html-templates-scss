@@ -288,6 +288,12 @@ legend {
   background: #f5f5f5;
 }
 
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 #header {
   height: 70px;
   background: #bdbdbd;
@@ -307,6 +313,11 @@ legend {
   background: #eeeeee;
 }
 
+#logo {
+  position: relative;
+  z-index: 1100;
+}
+
 #header .inner {
   display: flex;
   justify-content: space-between;
@@ -315,6 +326,62 @@ legend {
 #header .col-right {
   display: flex;
   flex-direction: row-reverse;
+}
+#header .u-skip a {
+  display: none;
+}
+#header .gnb-wrap .inp-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+}
+#header .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(2) {
+  display: none;
+}
+#header .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(1) {
+  transform: translateY(4px) rotate(-45deg);
+}
+#header .gnb-wrap .inp-burger:checked + .label-burger .bar:nth-child(3) {
+  transform: translateY(-4px) rotate(45deg);
+}
+#header .gnb-wrap .inp-burger:checked + .label-burger ~ #gnb {
+  left: 0%;
+}
+#header .gnb-wrap .label-burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  z-index: 1100;
+}
+#header .gnb-wrap .label-burger .bar {
+  display: block;
+  width: 20px;
+  height: 3px;
+  border-radius: 3px;
+  background: #000;
+  transition: all 0.3s;
+}
+#header #gnb {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  background: #fff;
+  transition: all 0.3s;
+}
+#header .util {
+  display: none;
 }
 #header .util ul {
   display: flex;
@@ -330,6 +397,11 @@ legend {
 }
 #header .util .link-lang::before {
   content: "\f0ac";
+}
+@media screen and (min-width: 480px) {
+  .ineer {
+    padding: 0;
+  }
 }
 .slide-intro swiper-slide {
   height: 300px;
