@@ -293,10 +293,16 @@ legend {
 .wrap {
   display: flex;
   min-height: 100vh;
+  max-width: 420px;
   flex-direction: column;
   background: #f5f5f5;
 }
 
+@media screen and (min-width: 1280px) {
+  .wrap {
+    max-width: none;
+  }
+}
 .inner {
   max-width: 1280px;
   margin: 0 auto;
